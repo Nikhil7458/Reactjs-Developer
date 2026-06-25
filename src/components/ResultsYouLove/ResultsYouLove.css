@@ -1,0 +1,153 @@
+/* ===== Section ===== */
+.results-section {
+  padding: 60px 40px;
+  background-color: #ffffff;
+}
+
+/* ===== Title ===== */
+.results-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 48px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== Scroll Wrapper ===== */
+.results-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  /* Hide scrollbar - all browsers */
+  scrollbar-width: none;         /* Firefox */
+  -ms-overflow-style: none;      /* IE / Edge */
+}
+
+.results-scroll-wrapper::-webkit-scrollbar {
+  display: none;                 /* Chrome / Safari */
+}
+
+/* ===== Cards Container ===== */
+.results-cards-container {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: max-content;            /* Let cards grow naturally */
+  padding-bottom: 8px;
+}
+
+/* ===== Single Card ===== */
+.result-card {
+  background-color: #eef4fb;
+  border-radius: 16px;
+  padding: 16px;
+  width: 340px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Images ===== */
+.result-images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.result-img {
+  width: 50%;
+  aspect-ratio: 4 / 4.5;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ===== Before / After Labels ===== */
+.result-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== Divider ===== */
+.result-divider {
+  height: 1px;
+  background-color: #d0dff0;
+  margin: 8px 0;
+}
+
+/* ===== Info Rows ===== */
+.result-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+}
+
+.info-label {
+  color: #555555;
+  font-weight: 400;
+}
+
+.info-value {
+  color: #111111;
+  font-weight: 500;
+}
+
+/* ===== Desktop: Show all 4 in a row ===== */
+@media (min-width: 1024px) {
+  .results-scroll-wrapper {
+    overflow-x: visible;
+  }
+
+  .results-cards-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .result-card {
+    width: calc(25% - 20px);
+    min-width: 260px;
+  }
+}
+
+/* ===== Tablet ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .results-section {
+    padding: 48px 24px;
+  }
+
+  .results-title {
+    font-size: 2rem;
+  }
+
+  .result-card {
+    width: 320px;
+  }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 767px) {
+  .results-section {
+    padding: 40px 16px;
+  }
+
+  .results-title {
+    font-size: 1.6rem;
+    margin-bottom: 32px;
+  }
+
+  .result-card {
+    width: 280px;
+  }
+
+  .result-info-row {
+    font-size: 0.82rem;
+  }
+}

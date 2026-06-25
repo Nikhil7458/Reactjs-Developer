@@ -5,6 +5,7 @@ import ClinicFinder from "./components/ClinicFinder/ClinicFinder";
 import WhistleAligners from "./components/WhistleAligners/WhistleAligners";
 
 import useLandingData from "./hooks/useLandingData";
+import ResultsYouLove from "./components/ResultsYouLove/ResultsYouLove";
 
 function App() {
 
@@ -33,6 +34,8 @@ function App() {
       <ClinicFinder />
 
       <WhistleAligners data={data.pricing} />
+
+      <ResultsYouLove/>
     </>
   );
 
